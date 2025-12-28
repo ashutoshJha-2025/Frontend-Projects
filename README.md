@@ -1,4 +1,3 @@
-# 🚀 Frontend Projects
 A collection of my **HTML, TailwindCSS, and JavaScript projects**, built to practice frontend development concepts and create real-world web applications.
 Each project is deployed using **GitHub Pages** and can be accessed live.
 
