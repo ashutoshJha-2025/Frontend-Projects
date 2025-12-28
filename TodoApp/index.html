@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <link rel="stylesheet" href="./src/style.css">
+        <link href="./src/output.css" rel="stylesheet">
+    </head>
+
+    <body
+        class="bg-[#101010] flex items-center justify-center h-screen w-screen">
+        <main class="bg-[#1B1B1B] sm:w-80 min-h-40 max-h-125 rounded-xl flex flex-col w-75">
+            <h2
+                class="text-2xl text-white text font-semibold text-center mb-2 mt-1">Todo
+                List</h2>
+
+            <div class="w-full flex justify-center gap-2 p-4 sm:p-2">
+                <input id="task-input" type="text"
+                    placeholder="Add a new task..."
+                    class="bg-[#2F2F2F] p-4 rounded-lg text-white placeholder-[#6C6C6C] focus:outline-none">
+
+                <button id="task-add-btn"
+                    class="bg-[#5D00E9] text-white p-2 rounded-lg w-18 cursor-pointer hover:bg-[#5303ca] transition-colors duration-200">Add
+                    Task</button>
+            </div>
+
+            <ul class="w-full flex-col gap-2" id="todo-list"></ul>
+        </main>
+
+        <script defer src="./src/script.js"></script>
+    </body>
+</html>

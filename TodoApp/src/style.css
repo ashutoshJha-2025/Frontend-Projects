@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+ul li {
+    background-color: #2F2F2F;
+    padding: 10px;
+    margin: 14px;
+    border-radius: 10px;
+    color: #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+ul button {
+    background-color: #D12B2B;
+    margin: 3px;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ul button:hover {
+    background-color: #ca0b0b;
+}
+
+ul button:active {
+    transform: scale(0.9);
+}
+
+.completed {
+    background-color: #292929;
+    color: #A9A9A9;
+    text-decoration: line-through;
+}
