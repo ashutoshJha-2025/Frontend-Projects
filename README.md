@@ -1,3 +1,8 @@
+# 🚀 Frontend Projects
+A collection of my **HTML, TailwindCSS, and JavaScript projects**, built to practice frontend development concepts and create real-world web applications.
+Each project is deployed using **GitHub Pages** and can be accessed live.
+
+---
 # [📝 Todo App](https://ashutoshjha-2025.github.io/Frontend-Projects/TodoApp/)
 ![preview](./TodoApp/Preview/Screenshot%202025-12-28%20100232.png)
 
