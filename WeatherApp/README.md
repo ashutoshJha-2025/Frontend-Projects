@@ -31,7 +31,7 @@ It fetches real-time weather data using the **OpenWeatherMap API** and displays 
 
 ## Preview
 
-![Weather App Screenshot](preview/Screenshot%202025-12-28%20122937.png)
-![Weather App Screenshot](preview/Screenshot%202025-12-28%20123003.png)
-![Weather App Screenshot](preview/Screenshot%202025-12-28%20122952.png)
+![Weather App Screenshot](Preview/Screenshot%202025-12-28%20122937.png)
+![Weather App Screenshot](Preview/Screenshot%202025-12-28%20123003.png)
+![Weather App Screenshot](Preview/Screenshot%202025-12-28%20122952.png)
 
