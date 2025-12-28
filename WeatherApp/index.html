@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="./src/style.css">
+        <link href="./src/output.css" rel="stylesheet">
+    </head>
+
+    <body
+        class="bg-[#101010] flex items-center justify-center h-screen w-screen">
+
+        <main
+            class="bg-[#1B1B1B] w-80 max-h-60 min-h-35 flex flex-col items-center rounded-xl gap-2 ">
+            <h2 class="text-white font-semibold text-xl mt-3">Weather App</h2>
+
+            <div class="flex flex-row gap-2 justify-around items-center">
+                <input type="text" placeholder="Enter City" id="city-input"
+                    class="bg-[#2F2F2F] p-4 rounded-lg text-white placeholder-[#6C6C6C] focus:outline-none">
+
+                <button id="city-button"
+                    class="bg-[#5D00E9] text-white p-1 rounded-lg w-18 cursor-pointer hover:bg-[#5303ca] transition-colors duration-200">Get
+                    Weather</button>
+            </div>
+
+            <div class="flex flex-col items-center hidden" id="weather-info">
+                <h2 class="text-white font-bold text-3xl" id="city-name">Bhopal</h2>
+                <span class="text-white" id="city-temparature">Temperaure: 23.61 C</span>
+                <span class="text-white" id="city-description">Weather: overcast clouds</span>
+            </div>
+
+            <span class="text-red-500 font-semibold hidden" id="error-message">City not found. Please try again.</span> 
+        </main>
+
+        <script src="./src/script.js"></script>
+    </body>
+</html>
