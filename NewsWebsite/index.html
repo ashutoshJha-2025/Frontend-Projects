@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daily News</title>
+        <link rel="stylesheet" href="./src/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <img src="./assets/NewsWebsite logo.png" alt="Logo"
+                    id="logo">
+
+                <div class="search-container">
+                    <input type="text"
+                        placeholder="Search news articles, topics, or keywords..."
+                        oninput="toggleClearButton()"
+                        class="search-input"
+                        id="searchInput">
+
+                    <span class="clear-btn" id="clearBtn"
+                        onclick="clearInput()">
+                        <i class="fas fa-times"></i>
+                    </span>
+
+                    <button class="search-button">
+                        🔍 Search
+                    </button>
+                </div>
+
+                <div class="personal">
+                    <button
+                        onclick="msgNotify"
+                        id="notify-btn">
+                        <img src="./assets/notifications-icon.png"
+                            alt="notification-icon" class="personal-icons">
+                    </button>
+
+                    <button
+                        onclick="msgNotify"
+                        id="admin-btn">
+                        <img
+                            src="./assets/manage_account.svg"
+                            alt="account-icon" class="personal-icons">
+                    </button>
+                </div>
+            </nav>
+            <div id="bg1"></div>
+
+            <div class="filters">
+                <button class="categories">Politics</button>
+                <button class="categories">Economics</button>
+                <button class="categories">International</button>
+                <button class="categories">Sports</button>
+                <button class="categories">Entertainment</button>
+                <button class="categories">Science & Tech</button>
+                <button class="categories">Environment</button>
+                <button class="categories active">All News</button>
+
+                <div class="date-range">
+                    <div class="date-field">
+                        <label for="fromDate">From</label>
+                        <input type="date" id="fromDate"
+                            placeholder="dd-mm-yyyy" />
+                    </div>
+
+                    <div class="date-field">
+                        <label for="toDate">To</label>
+                        <input type="date" id="toDate"
+                            placeholder="dd-mm-yyyy" />
+                    </div>
+                </div>
+            </div>
+            <div id="bg2"></div>
+        </header>
+
+        <main>
+            <div class="cards-container" id="cardsContainer">
+
+            </div>
+        </main>
+
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img
+                        src="https://www.usatoday.com/gcdn/authoring/authoring-images/2024/12/29/USAT/77300348007-2191738355.jpg"
+                        alt="news-image" id="news-image">
+                </div>
+                <div class="card-details">
+                    <h6 id="news-source">End gadget 26/08/2023</h6>
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <p id="news-desc">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Magni ipsam laudantium
+                        a facere praesentium distinctio autem sed, eaque
+                        neque obcaecati minima iusto repudiandae, ipsum
+                        dolores voluptatem fugit? Omnis, officia saepe.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <button id="src-link">View full Article</button>
+                    <div class="save">
+                        <button id="share-btn">
+                            <img
+                                src="./assets/share_icon.svg">
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <div class="msg">
+            <div><h3>Coming Soon</h3></div>
+            <div>
+                <i class="fas fa-times" id="msg-close"></i>
+                <span id="editable">User accounts</span><span>will be available
+                    soon.</span>
+            </div>
+        </div>
+
+        <div class="link-box">
+            <div class="header">
+                Copy Link
+                <span class="close-btn"
+                    onclick="this.parentElement.parentElement.style.display='none';">&times;</span>
+            </div>
+
+            <div class="link-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Expedita quos quis totam voluptatem nam tenetur ea
+                    laudantium qui ut commodi.</p>
+            </div>
+        </div>
+
+        <script src="./src/script.js"></script>
+    </body>
+</html>

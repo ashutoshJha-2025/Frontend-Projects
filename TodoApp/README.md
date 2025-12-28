@@ -27,5 +27,5 @@ This app helps users manage daily tasks efficiently with persistent storage usin
 
 ## 📸 Preview
 
-![ToDo App Screenshot](preview/Screenshot%202025-12-28%20100153.png)
-![ToDo App Screenshot](preview/Screenshot%202025-12-28%20100232.png)
+![ToDo App Screenshot](Preview/Screenshot%202025-12-28%20100153.png)
+![ToDo App Screenshot](Preview/Screenshot%202025-12-28%20100232.png)
