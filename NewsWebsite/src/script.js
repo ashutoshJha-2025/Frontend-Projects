@@ -35,18 +35,37 @@ window.addEventListener('load', () => fetchNews("India"));
 async function fetchNews(query) {
     const fromDate = document.getElementById("fromDate")?.value;
     const toDate = document.getElementById("toDate")?.value;
-    let apiUrl = `${url}${query}&sortBy=publishedAt&apiKey=${API_KEY}`
-    if (fromDate) {
-        apiUrl += `&from=${fromDate}`;
-    }
-    if (toDate) {
-        apiUrl += `&to=${toDate}`;
-    }
+    let apiUrl = `${url}${encodeURIComponent(query)}&sortBy=publishedAt&apiKey=${API_KEY}`;
+    if (fromDate) apiUrl += `&from=${fromDate}`;
+    if (toDate) apiUrl += `&to=${toDate}`;
 
-    const res = await fetch(apiUrl);
-    const data = await res.json();
-    console.log(data.articles);
-    bindData(data.articles);
+    try {
+        const res = await fetch(apiUrl);
+        const data = await res.json().catch(() => null);
+
+        if (!res.ok) {
+            console.error("NewsAPI returned an error", res.status, data);
+            showErrorOnPage(data?.message || `Request failed: ${res.status}`);
+            return;
+        }
+
+        if (!data || !Array.isArray(data.articles)) {
+            console.error("No articles in response", data);
+            showErrorOnPage("No articles returned by the API.");
+            return;
+        }
+
+        console.log(data.articles);
+        bindData(data.articles);
+    } catch (err) {
+        console.error("Network or unexpected error while fetching news:", err);
+        showErrorOnPage("Network error — check console for details.");
+    }
+}
+
+function showErrorOnPage(msg) {
+    const container = document.getElementById("cardsContainer");
+    container.innerHTML = `<div class="error">Error: ${msg}</div>`;
 }
 
 function bindData(articles) {
